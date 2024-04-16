@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Team Data</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <!-- Sidebar -->
+    <div id="sidebar" class="bg-dark">
+        <h3 class="text-white text-center mt-3 mb-4">Workit<span class="sidebar-dot">.</span></h3>
+            <!-- Sidebar Menu Items -->
+            <div class="menu-item">
+                <a href="#" class="sidebar-link">
+                    <i class="fas fa-tachometer-alt mr-2"></i>
+                    <span class="menu-text">Dashboard</span> 
+                </a>
+            </div>
+            <div class="menu-item">
+                <a href="#" class="sidebar-link">
+                    <i class="fas fa-box-open mr-2"></i>
+                    <span class="menu-text">Available Units</span> 
+                </a>
+            </div>
+            <div class="menu-item">
+                <a href="#" class="sidebar-link">
+                    <i class="fas fa-file-invoice-dollar mr-2"></i>
+                    <span class="menu-text">Invoices</span> 
+                </a>
+            </div>
+            <div class="menu-item">
+                <a href="#" class="sidebar-link">
+                    <i class="fas fa-project-diagram mr-2"></i>
+                    <span class="menu-text">Projects</span> 
+                </a>
+            </div>
+            <div class="menu-item">
+                <a href="#" class="sidebar-link">
+                    <i class="fab fa-twitter mr-2"></i>
+                    <span class="menu-text">Social Media</span> 
+                </a>
+            </div>
+            <div class="menu-item">
+                <a href="#" class="sidebar-link">
+                    <i class="fas fa-plug mr-2"></i> 
+                    <span class="menu-text">Integrations</span>
+                </a>
+            </div>
+            <div class="menu-item">
+                <a href="#" class="sidebar-link">
+                    <i class="fas fa-book mr-2"></i>
+                    <span class="menu-text">Documentation</span> 
+                </a>
+            </div>
+            <div class="bottom-links mt-auto">
+                <div class="menu-item">
+                    <a href="#" class="sidebar-link">
+                        <i class="fas fa-cog"></i>
+                        <span class="menu-text">Settings</span>
+                    </a>
+                </div>
+                <div class="menu-item">
+                    <a href="#" class="sidebar-link">
+                        <i class="fas fa-question-circle"></i>
+                        <span class="menu-text">Help Center</span>
+                    </a>
+                </div>
+            </div>
+    </div>
+        
+    <!-- Page Content -->
+    <div id="content">
+        <!-- Header -->
+        <header class="py-1">
+            <div class="container-fluid top-banner d-flex justify-content-between align-items-center">
+                <!-- Team Dropdown -->
+                <div class="dropdown">
+                    <button class="btn-white dropdown-toggle custom-dropdown" type="button" id="teamDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                        <span class="fw-bold text-dark">Team</span>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="teamDropdown">
+                        <li><a class="dropdown-item" href="#">Team Member 1</a></li>
+                        <li><a class="dropdown-item" href="#">Team Member 2</a></li>
+                        <li><a class="dropdown-item" href="#">Team Member 3</a></li>
+                    </ul>
+                </div>
+                
+                <div class="d-flex align-items-center">
+                <!-- New User Button -->
+                    <button class="btn btn-primary me-3 rounded-left">
+                        <span>New User</span>
+                        <i class="fas fa-plus"></i>
+                    </button>
+        
+                    <!-- Notification Icon -->
+                    <a href="#" class="text-light me-3 icon" ><i class="far fa-bell fs-5"></i></a>
+        
+                    <!-- Search Icon -->
+                    <a href="#" class="text-light icon"><i class="fas fa-search"></i></i></a>
+    
+                <!-- Profile Display -->
+                        <a class="d-flex align-items-center text-light text-decoration-none" href="#" id="profileDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="img/profile.jpg" alt="Profile Image" class="rounded-circle profile me-2">
+                        </a>
+                </div>
+    
+            </div>
+        </header>
+
+         <!-- Content Below Header -->
+         <div class="d-flex right-content justify-content-between align-items-center" style="flex-grow: 1;">
+            <div class="d-flex align-items-center">
+            <!-- Filter Users Button -->
+                    <div class="btn-group">
+                        <button class="btn filter-users rounded-left me-3">Filter Users <i class="fas fa-bars"></i></button>
+                    </div>
+                        <!-- Search Input -->
+                    <div class="input-group search-input">
+                        <input type="text" class="form-control rounded-pill" placeholder="Try New..." aria-label="Search" aria-describedby="search-icon">
+                        <i class="fas fa-search search-icon"></i> 
+                    </div>
+             </div>
+            <div class="d-flex align-items-center">
+                <!-- Sort by Date Dropdown -->
+                <div class="dropdown me-3">
+                    <button class="btn btn-light sort-by dropdown-toggle" type="button" id="sortByDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                        Sort by Date
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="sortByDropdown">
+                        <li><a class="dropdown-item" href="#">Ascending</a></li>
+                        <li><a class="dropdown-item" href="#">Descending</a></li>
+                    </ul>
+                </div>
+
+                <!-- Kebab Menu -->
+                <div class="dropdown">
+                    <button class="kebab-menu">
+                        <i class="fas fa-ellipsis-v"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+         <!-- Main Content -->
+    <div class="container team-list-card my-5">
+        <div class="row row-cols-1 row-cols-md-4 g-4">
+            <!-- Bootstrap Card Example -->
+            <div class="col">
+                <div class="card h-100">
+                    <div class="card-content">
+                        <img src="img/avatar-8.webp" class="card-img-top rounded-image" alt="Image 1">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Robert Whistable</h5>
+                            <p class="card-text">Product manager.</p>
+                            <div class="row justify-content-center mt-4">
+                                <!-- Project Column -->
+                                <div class="col text-center">
+                        <p>Projects</p>
+                        <p>3</p>
+                    </div>
+
+                    <!-- Tasks Column -->
+                    <div class="col text-center">
+                        <p>Tasks</p>
+                        <p>8</p>
+                    </div>
+
+                    <!-- Insights Column -->
+                    <div class="col text-center">
+                        <p>Insights</p>
+                        <p>5</p>
+                    </div>
+                            </div>
+            
+                            <a href="#" class="btn view-profile">View Profile</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card h-100">
+                    <div class="card-content">
+                        <img src="img/avatar-7.webp" class="card-img-top rounded-image" alt="Image 1">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Francois Boateng</h5>
+                            <p class="card-text">Product manager.</p>
+                            <div class="row justify-content-center mt-4">
+                                <!-- Project Column -->
+                                <div class="col text-center">
+                        <p>Projects</p>
+                        <p>3</p>
+                    </div>
+
+                    <!-- Tasks Column -->
+                    <div class="col text-center">
+                        <p>Tasks</p>
+                        <p>8</p>
+                    </div>
+
+                    <!-- Insights Column -->
+                    <div class="col text-center">
+                        <p>Insights</p>
+                        <p>5</p>
+                    </div>
+                            </div>
+            
+                            <a href="#" class="btn view-profile">View Profile</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card h-100">
+                    <div class="card-content">
+                        <img src="img/avatar-6.webp" class="card-img-top rounded-image" alt="Image 1">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Ellliot Bradbury</h5>
+                            <p class="card-text">Product manager.</p>
+                            <div class="row justify-content-center mt-4">
+                                <!-- Project Column -->
+                                <div class="col text-center">
+                        <p>Projects</p>
+                        <p>3</p>
+                    </div>
+
+                    <!-- Tasks Column -->
+                    <div class="col text-center">
+                        <p>Tasks</p>
+                        <p>8</p>
+                    </div>
+
+                    <!-- Insights Column -->
+                    <div class="col text-center">
+                        <p>Insights</p>
+                        <p>5</p>
+                    </div>
+                            </div>
+            
+                            <a href="#" class="btn view-profile">View Profile</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <div class="card-content">
+                        <img src="img/avatar-5.webp" class="card-img-top rounded-image" alt="Image 1">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Carlos Heros</h5>
+                            <p class="card-text">Product manager.</p>
+                            <div class="row justify-content-center mt-4">
+                                <!-- Project Column -->
+                                <div class="col text-center">
+                        <p>Projects</p>
+                        <p>3</p>
+                    </div>
+
+                    <!-- Tasks Column -->
+                    <div class="col text-center">
+                        <p>Tasks</p>
+                        <p>8</p>
+                    </div>
+
+                    <!-- Insights Column -->
+                    <div class="col text-center">
+                        <p>Insights</p>
+                        <p>5</p>
+                    </div>
+                            </div>
+            
+                            <a href="#" class="btn view-profile">View Profile</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <div class="card-content">
+                        <img src="img/avatar-4.webp" class="card-img-top rounded-image" alt="Image 1">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Paul Sheratt</h5>
+                            <p class="card-text">Product manager.</p>
+                            <div class="row justify-content-center mt-4">
+                                <!-- Project Column -->
+                                <div class="col text-center">
+                        <p>Projects</p>
+                        <p>3</p>
+                    </div>
+
+                    <!-- Tasks Column -->
+                    <div class="col text-center">
+                        <p>Tasks</p>
+                        <p>8</p>
+                    </div>
+
+                    <!-- Insights Column -->
+                    <div class="col text-center">
+                        <p>Insights</p>
+                        <p>5</p>
+                    </div>
+                            </div>
+            
+                            <a href="#" class="btn view-profile">View Profile</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <div class="card-content">
+                        <img src="img/avatar-3.webp" class="card-img-top rounded-image" alt="Image 1">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Sophie Bun</h5>
+                            <p class="card-text">Product manager.</p>
+                            <div class="row justify-content-center mt-4">
+                                <!-- Project Column -->
+                                <div class="col text-center">
+                        <p>Projects</p>
+                        <p>3</p>
+                    </div>
+
+                    <!-- Tasks Column -->
+                    <div class="col text-center">
+                        <p>Tasks</p>
+                        <p>8</p>
+                    </div>
+
+                    <!-- Insights Column -->
+                    <div class="col text-center">
+                        <p>Insights</p>
+                        <p>5</p>
+                    </div>
+                            </div>
+            
+                            <a href="#" class="btn view-profile">View Profile</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <div class="card-content">
+                        <img src="img/avatar-2.webp" class="card-img-top rounded-image" alt="Image 1">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Emilie Rose</h5>
+                            <p class="card-text">Product manager.</p>
+                            <div class="row justify-content-center mt-4">
+                                <!-- Project Column -->
+                                <div class="col text-center">
+                        <p>Projects</p>
+                        <p>3</p>
+                    </div>
+
+                    <!-- Tasks Column -->
+                    <div class="col text-center">
+                        <p>Tasks</p>
+                        <p>8</p>
+                    </div>
+
+                    <!-- Insights Column -->
+                    <div class="col text-center">
+                        <p>Insights</p>
+                        <p>5</p>
+                    </div>
+                            </div>
+            
+                            <a href="#" class="btn view-profile">View Profile</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <div class="card-content">
+                        <img src="img/avatar-1.webp" class="card-img-top rounded-image" alt="Image 1">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Lousie Redknapp</h5>
+                            <p class="card-text">Product manager.</p>
+                            <div class="row justify-content-center mt-4">
+                                <!-- Project Column -->
+                                <div class="col text-center">
+                        <p>Projects</p>
+                        <p>3</p>
+                    </div>
+
+                    <!-- Tasks Column -->
+                    <div class="col text-center">
+                        <p>Tasks</p>
+                        <p>8</p>
+                    </div>
+
+                    <!-- Insights Column -->
+                    <div class="col text-center">
+                        <p>Insights</p>
+                        <p>5</p>
+                    </div>
+                    </div>            
+                            <a href="#" class="btn view-profile">View Profile</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Add more cards as needed within the same row -->
+            <!-- Each row should contain four cards -->
+
+        </div>
+    </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>
